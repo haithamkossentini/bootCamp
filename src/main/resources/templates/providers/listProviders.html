@@ -4,10 +4,15 @@
 Pour ajouter un provider cliquer ici<a class="btn btn-primary" th:href="@{/provider/add}">Add Provider</a>
 </div>
 <table class="table" align="center" border="1">
-	<tr><th>Nom</th><th>Email</th><th>Adresse</th></tr>
+	<tr><th>Id</th><th>Nom</th><th>Email</th><th>Adresse</th><th>Details</th><th>Delete</th><th>Edit</th></tr>
 	<tr th:each="provider:${providers}">
+		<td th:text="${provider.id}"></td>
 		<td th:text="${provider.name}"></td>
 		<td th:text="${provider.email}"></td>
 		<td th:text="${provider.adresse}"></td>
+		<td><a href="" class="btn btn-info" th:href="@{/provider/details/{id}(id=${provider.id})}">Voir détails</a></td>
+		<td><a href="" class="btn btn-danger" th:href="@{/provider/delete/{id}(id=${provider.id})}">Supprimer</a></td>
+		<td><a href="" class="btn btn-warning" th:href="@{/provider/update/{id}(id=${provider.id})}">Editer</a></td>
+
 	</tr>
 </table>

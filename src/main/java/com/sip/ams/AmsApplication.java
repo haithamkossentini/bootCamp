@@ -11,9 +11,9 @@ public class AmsApplication {
 	public static List<Provider> providers =  new ArrayList<>();
 	public static void main(String[] args) {
 		
-		Provider p1 = new Provider("Nokia","nokia@hotmail.fr","China");
-		Provider p2 = new Provider("Samsung","samsung@gmail.com","Korea");
-		Provider p3 = new Provider("HP","hp@gmail.com","USA");
+		Provider p1 = new Provider("Nokia","nokia@hotmail.fr","China",1,"des1");
+		Provider p2 = new Provider("Samsung","samsung@gmail.com","Korea",2,"des2");
+		Provider p3 = new Provider("HP","hp@gmail.com","USA",3,"des3");
 		providers.add(p1);
 		providers.add(p2);
 		providers.add(p3);
